@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador de Notas</title>
+</head>
+<body>
+  <h1>Simulador de Notas</h1>
+  <p>Ingresa las notas de los alumnos:</p>
+  <div id="inputContainer">
+    <label for="numAlumnos">Número de alumnos:</label>
+    <input type="number" id="numAlumnos">
+    <button id="crearCamposButton">Crear Campos</button>
+    <!-- Botón para cargar datos locales -->
+    <button id="cargarDatosLocalesButton">Cargar Datos Locales</button>
+  </div>
+
+  <div id="notasContainer"></div>
+
+  <button id="calcularNotasButton">Calcular Notas Finales</button>
+  <div id="resultados"></div>
+
+  <div id="historialContainer">
+    <h2>Historial de Notas Guardadas</h2>
+    <ul id="historialList"></ul>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="main.js"></script>
+  <script>
+    // Llamar a la función crearCamposNotas al hacer clic en el botón
+    document.getElementById("crearCamposButton").addEventListener("click", crearCamposNotas);
+
+    // Llamar a la función cargarDatosLocales al hacer clic en el botón
+    document.getElementById("cargarDatosLocalesButton").addEventListener("click", cargarDatosLocales);
+
+    // Llamar a la función calcularNotasFinales al hacer clic en el botón
+    document.getElementById("calcularNotasButton").addEventListener("click", calcularNotasFinales);
+  </script>
+</body>
+</html>
+
